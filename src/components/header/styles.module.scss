@@ -1,0 +1,20 @@
+.header {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.nav {
+  justify-content: space-between;
+  backdrop-filter: blur(20px);
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(216 217 220);
+}
+
+.flag {
+  width: 24px;
+  height: 24px;
+}
