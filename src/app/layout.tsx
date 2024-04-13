@@ -5,6 +5,8 @@ import type { Metadata } from 'next'
 /* Theme provider */
 import { ThemeProvider } from '@/modules/Theme'
 import '@/theme/globals.scss'
+import { BackgroundModernOne } from '@/modules/UI/feature/Background/variants/modern-one/BackgroundModernOne'
+import { Header } from '@/components/header/Header'
 
 /* Define metadata */
 export const metadata: Metadata = {
@@ -21,9 +23,13 @@ export default function RootLayout({ children }: Props) {
     <html lang="en">
       <body>
         <ThemeProvider>
-          <Box component="main">
-            { children }
-          </Box>
+          <BackgroundModernOne>
+            <Header />
+
+            <Box component="main">
+              { children }
+            </Box>
+          </BackgroundModernOne>
         </ThemeProvider>
       </body>
     </html>
