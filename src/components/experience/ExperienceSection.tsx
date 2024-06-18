@@ -41,7 +41,7 @@ export function ExperienceSection() {
         <VerticalTimeline>
           <VerticalTimelineElement
             visible
-            className="vertical-timeline-element--work"
+            // className="vertical-timeline-element--work"
             contentArrowStyle={ { borderRight: '7px solid  rgb(33, 150, 243)' } }
             contentStyle={ { background: 'rgb(33, 150, 243)', color: '#fff' } }
             date="2011 - present"
