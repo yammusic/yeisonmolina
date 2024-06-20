@@ -1,0 +1,8 @@
+export * from './about-me'
+export * from './experience'
+export * from './header'
+export * from './profile'
+// export * from './footer'
+// export * from './projects'
+// export * from './skills'
+// export * from './contact'

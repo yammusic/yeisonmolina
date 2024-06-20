@@ -1,1 +1,1 @@
-export * from './feature/Background'
+export * from '../../app/_ui/components/background'

@@ -1,0 +1,27 @@
+@function getPaletteVariables($palette, $prefix: '') {
+  @if (not type-of($palette) == 'map') {
+    @error 'Unknown palette type: #{type-of($palette)}';
+  }
+
+  $scope: 'palette';
+  $variants: ();
+
+  @each $variant, $colors in $palette {
+    @if ($variant == 'dark') {
+      $variants: map-merge($variants, getPaletteVariables($colors, 'dark'));
+    } @else {
+      @each $idx, $value in $colors {
+        $key: '#{$variant}-#{to-lower-case($idx)}';
+
+        @if ($prefix != '') {
+          $key: '#{$prefix}-#{$key}';
+        }
+
+        $key: '#{$scope}-#{$key}';
+        $variants: map-merge($variants, ($key: $value));
+      }
+    }
+  }
+
+  @return $variants;
+}

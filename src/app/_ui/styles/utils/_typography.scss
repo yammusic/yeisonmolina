@@ -1,0 +1,27 @@
+@function getTypographyVariables($typography, $prefix: '') {
+  @if (not type-of($typography) == 'map') {
+    @error 'Unknown typography type: #{type-of($typography)}';
+  }
+
+  $scope: 'typography';
+  $variants: ();
+
+  @each $variant, $colors in $typography {
+    @if ($variant == 'dark') {
+      $variants: map-merge($variants, getTypographyVariables($colors, 'dark'));
+    } @else {
+      @each $idx, $value in $colors {
+        $key: '#{$variant}-#{$idx}';
+
+        @if ($prefix != '') {
+          $key: '#{$prefix}-#{$key}';
+        }
+
+        $key: '#{$scope}-#{$key}';
+        $variants: map-merge($variants, ($key: $value));
+      }
+    }
+  }
+
+  @return $variants;
+}

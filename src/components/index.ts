@@ -1,8 +1,0 @@
-export * from './about-me'
-export * from './common'
-// export * from './contact'
-export * from './experience'
-export * from './header'
-// export * from './projects'
-export * from './profile'
-// export * from './skills'

@@ -1,0 +1,136 @@
+@use '../../utils' as *;
+
+$_grey: grey;
+$_heading: getColor($_grey, 900);
+$_headingDark: #d7dcec;
+$_primary: getColor($_grey, 700);
+$_primaryDark: #364152;
+$_secondary: getColor($_grey, 500);
+$_secondaryDark: #8492c4;
+
+$typography: (
+  'h1': (
+    color: $_heading,
+    fontSize: 2.125rem,
+    fontWeight: 700,
+  ),
+
+  'h2': (
+    color: $_heading,
+    fontSize: 1.5rem,
+    fontWeight: 700,
+  ),
+
+  'h3': (
+    color: $_heading,
+    fontSize: 1.25rem,
+    fontWeight: 600,
+  ),
+
+  'h4': (
+    color: $_heading,
+    fontSize: 1rem,
+    fontWeight: 600,
+  ),
+
+  'h5': (
+    color: $_heading,
+    fontSize: 0.875rem,
+    fontWeight: 500,
+  ),
+
+  'h6': (
+    color: $_heading,
+    fontSize: 0.75rem,
+    fontWeight: 500,
+  ),
+
+  'subtitle1': (
+    color: $_heading,
+    fontSize: 0.875rem,
+    fontWeight: 500,
+  ),
+
+  'subtitle2': (
+    color: $_secondary,
+    fontSize: 0.75rem,
+    fontWeight: 400,
+  ),
+
+  'body1': (
+    fontSize: 0.875rem,
+    fontWeight: 400,
+    lineHeight: 1.334em,
+  ),
+
+  'body2': (
+    color: $_primary,
+    fontWeight: 400,
+    letterSpacing: 0em,
+    lineHeight: 1.5em,
+  ),
+
+  'caption': (
+    color: $_secondary,
+    fontSize: 0.75rem,
+    fontWeight: 400,
+  ),
+
+  'button': (
+    textTransform: capitalize,
+  ),
+
+  'overline': (),
+
+  'dark': (
+    'h1': (
+      color: $_headingDark,
+    ),
+
+    'h2': (
+      color: $_headingDark,
+    ),
+
+    'h3': (
+      color: $_headingDark,
+    ),
+
+    'h4': (
+      color: $_headingDark,
+    ),
+
+    'h5': (
+      color: $_headingDark,
+    ),
+
+    'h6': (
+      color: $_headingDark,
+    ),
+
+    'subtitle1': (
+      color: $_headingDark,
+    ),
+
+    'subtitle2': (
+      color: $_secondaryDark,
+    ),
+
+    'body1': (),
+
+    'body2': (
+      color: $_primaryDark,
+    ),
+
+    'caption': (
+      color: $_secondaryDark,
+    ),
+  ),
+);
+
+$_variables: getTypographyVariables($typography);
+
+:export {
+  @each $key, $value in $_variables {
+    #{$key}: $value;
+  }
+}

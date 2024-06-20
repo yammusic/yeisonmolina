@@ -1,0 +1,105 @@
+@use '../../utils' as *;
+
+$_primary: blue;
+$_secondary: deepPurple;
+$_error: red;
+$_warning: amber;
+$_info: cyan;
+$_success: green;
+$_grey: grey;
+$_black: #111936;
+$_white: #ffffff;
+$_grey500: #697586;
+$_grey700: #364152;
+$_darkGrey500: #bdc8f0;
+$_darkGrey700: #8492c4;
+$_darkBackground: #1a223f;
+
+$palette: (
+  'primary': getColor($_primary, (
+    200, 800, ('main': 500, 'light': 50, 'dark': 600)
+  )),
+
+  'secondary': getColor($_secondary, (
+    200, 800, ('main': 500, 'light': 50, 'dark': 600)
+  )),
+
+  'error': getColor($_error, (
+    200, 600, ('main': 400, 'light': 50, 'dark': 800)
+  )),
+
+  'warning': getColor($_warning, (
+    200, 600, ('main': 400, 'light': 50, 'dark': 800)
+  )),
+
+  'info': getColor($_info, (
+    200, 600, ('main': 400, 'light': 50, 'dark': 800)
+  )),
+
+  'success': getColor($_success, (
+    200, 600, ('main': 400, 'light': 50, 'dark': 800)
+  )),
+
+  'common': (
+    'black': $_black,
+    'white': $_white,
+  ),
+
+  'grey': (
+    '50': #f8fafc,
+    '100': #eef2f6,
+    '200': getColor($_grey, 200),
+    '300': getColor($_grey, 300),
+    '400': getColor($_grey, 400),
+    '500': $_grey500,
+    '600': #4b5565,
+    '700': $_grey700,
+    '800': getColor($_grey, 800),
+    '900': #121926,
+  ),
+
+  'text': (
+    'primary': $_grey700,
+    'secondary': $_grey500,
+  ),
+
+  'background': (
+    'paper': $_white,
+    'default': getColor($_primary, 50),
+  ),
+
+  'dark': (
+    'primary': getColor($_primary, (
+      200, 800, ('main': 500, 'light': 50, 'dark': 600)
+    )),
+
+    'secondary': getColor($_secondary, (
+      200, (800: A700, 'main': A200, 'light': 100, 'dark': A400)
+    )),
+
+    'grey': (
+      '500': $_darkGrey500,
+      '600': #d7dcec,
+      '700': $_darkGrey700,
+      '900': #bdc8f0
+    ),
+
+    'text': (
+      'primary': $_darkGrey700,
+      'secondary': $_darkGrey500,
+    ),
+
+    'background': (
+      'paper': $_black,
+      'default': $_darkBackground,
+    ),
+  ),
+);
+
+$_variables: getPaletteVariables($palette);
+
+:export {
+  @each $key, $value in $_variables {
+    #{$key}: $value;
+  }
+}
