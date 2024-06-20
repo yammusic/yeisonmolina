@@ -13,12 +13,12 @@
     "jsx": "preserve",
     "incremental": true,
     "plugins": [
-      {
-        "name": "next"
-      }
+      { "name": "next" }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/app/*": ["./src/app/_ui/*"],
+      "@/domain/*": ["./src/domain/*"],
+      "@/infra/*": ["./src/infra/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

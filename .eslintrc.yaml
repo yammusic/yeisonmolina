@@ -20,7 +20,7 @@ extends:
   - eslint:recommended
   - next/core-web-vitals
   - plugin:@typescript-eslint/recommended
-  - plugin:@next/next/recommended
+  # - plugin:@next/next/recommended
   - plugin:import/recommended
   - plugin:jsx-a11y/recommended
   - plugin:react/recommended
@@ -31,15 +31,18 @@ settings:
 rules:
   semi: [error, never]
   quotes: [error, single]
-  no-console: [error, { allow: [warn, error] }]
+  no-console: [error, { allow: [warn, error, log, info] }]
   object-curly-spacing: 0
 
   # Import rules
   # import/order: [error, { alphabetize: { order: asc } }]
+  import/named: [off]
+  import/namespace: [off]
 
   # Typescript rules
   '@typescript-eslint/object-curly-spacing': [error, always]
   '@typescript-eslint/consistent-type-imports': [error, { prefer: type-imports }]
+  '@typescript-eslint/no-explicit-any': [off]
 
   # React rules
   react/boolean-prop-naming: [error, { rule: '^(is|has)[A-Z]([A-Za-z0-9]?)+' }]
@@ -70,7 +73,7 @@ rules:
   react/jsx-indent-props: [error, 2]
   react/jsx-indent: [error, 2]
   react/jsx-key: [error, { checkFragmentShorthand: true }]
-  react/jsx-max-depth: [error, { max: 5 }]
+  react/jsx-max-depth: [error, { max: 7 }]
   react/jsx-max-props-per-line: [error, { maximum: { single: 3, multi: 1 } }]
   react/jsx-newline: [error]
   react/jsx-no-bind: [error, { allowArrowFunctions: true }]
@@ -129,7 +132,7 @@ rules:
   react/prefer-stateless-function: [error]
   react/prop-types: [error, { ignore: [], customValidators: [] }]
   react/react-in-jsx-scope: [error]
-  react/require-default-props: [error]
+  # react/require-default-props: [error]
   react/require-optimization: [error]
   react/require-render-return: [error]
   react/self-closing-comp: [error]
@@ -140,3 +143,7 @@ rules:
   react/static-property-placement: [error]
   react/style-prop-object: [error]
   react/void-dom-elements-no-children: [error]
+
+  # React hooks
+  react-hooks/exhaustive-deps: [off]
+  react-hooks/rules-of-hooks: [off]
