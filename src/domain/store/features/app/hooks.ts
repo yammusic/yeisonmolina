@@ -1,38 +1,56 @@
-'use client'
+/* eslint-disable react-hooks/rules-of-hooks */
 
-import { useAppStore } from './state'
-import type { AppActions, AppState } from './types'
+import { useSelector } from 'react-redux'
+import { bindActionCreators } from '@reduxjs/toolkit'
 
-// Selectors
-export const useAppState = (): AppState => ({
-  appBrand: useAppStore((state) => state.appBrand),
-  appDescription: useAppStore((state) => state.appDescription),
-  appName: useAppStore((state) => state.appName),
-  author: useAppStore((state) => state.author),
-  locale: useAppStore((state) => state.locale),
-  version: useAppStore((state) => state.version),
+import { useAppDispatch } from '../../shared/hooks'
+import type { RootState } from '../../shared/types'
+import {
+  setAppBrand,
+  setAppDescription,
+  setAppName,
+  setAuthor,
+  setLocale,
+  setNavItems,
+  setVersion,
+} from './actions'
+
+/* Selectors */
+export const useAppState = () => ({
+  appBrand: useSelector(({ app }: RootState) => app.appBrand),
+  appDescription: useSelector(({ app }: RootState) => app.appDescription),
+  appName: useSelector(({ app }: RootState) => app.appName),
+  author: useSelector(({ app }: RootState) => app.author),
+  locale: useSelector(({ app }: RootState) => app.locale),
+  navItems: useSelector(({ app }: RootState) => app.navItems),
+  version: useSelector(({ app }: RootState) => app.version),
 })
 
-export const useAppBrand = () => useAppStore((state) => state.appBrand)
-export const useAppDescription = () => useAppStore((state) => state.appDescription)
-export const useAppName = () => useAppStore((state) => state.appName)
-export const useAppAuthor = () => useAppStore((state) => state.author)
-export const useAppLocale = () => useAppStore((state) => state.locale)
-export const useAppVersion = () => useAppStore((state) => state.version)
+export const appBrand = () => useSelector(({ app }: RootState) => app.appBrand)
+export const appDescription = () => useSelector(({ app }: RootState) => app.appDescription)
+export const appName = () => useSelector(({ app }: RootState) => app.appName)
+export const appAuthor = () => useSelector(({ app }: RootState) => app.author)
+export const appLocale = () => useSelector(({ app }: RootState) => app.locale)
+export const appNavItems = () => useSelector(({ app }: RootState) => app.navItems)
+export const appVersion = () => useSelector(({ app }: RootState) => app.version)
 
-// Actions
-export const useAppActions = (): AppActions => ({
-  setAppBrand: useAppStore((state) => state.setAppBrand),
-  setAppDescription: useAppStore((state) => state.setAppDescription),
-  setAppName: useAppStore((state) => state.setAppName),
-  setAuthor: useAppStore((state) => state.setAuthor),
-  setLocale: useAppStore((state) => state.setLocale),
-  setVersion: useAppStore((state) => state.setVersion),
+/* Actions */
+export const useAppActions = () => ({
+  ...bindActionCreators({
+    setAppBrand,
+    setAppDescription,
+    setAppName,
+    setAuthor,
+    setLocale,
+    setNavItems,
+    setVersion,
+  }, useAppDispatch())
 })
 
-export const useSetBrand = () => useAppStore((state) => state.setAppBrand)
-export const useSetDescription = () => useAppStore((state) => state.setAppDescription)
-export const useSetAppName = () => useAppStore((state) => state.setAppName)
-export const useSetAuthor = () => useAppStore((state) => state.setAuthor)
-export const useSetLocale = () => useAppStore((state) => state.setLocale)
-export const useSetVersion = () => useAppStore((state) => state.setVersion)
+export const useAppBrand = () => bindActionCreators({ setAppBrand }, useAppDispatch()).setAppBrand
+export const useAppDescription = () => bindActionCreators({ setAppDescription }, useAppDispatch()).setAppDescription
+export const useAppName = () => bindActionCreators({ setAppName }, useAppDispatch()).setAppName
+export const useAppAuthor = () => bindActionCreators({ setAuthor }, useAppDispatch()).setAuthor
+export const useAppLocale = () => bindActionCreators({ setLocale }, useAppDispatch()).setLocale
+export const useAppNavItems = () => bindActionCreators({ setNavItems }, useAppDispatch()).setNavItems
+export const useAppVersion = () => bindActionCreators({ setVersion }, useAppDispatch()).setVersion

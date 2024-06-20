@@ -3,7 +3,7 @@
 import React, { useEffect, useMemo } from 'react'
 import { useMediaQuery } from '@mui/material'
 
-import { useThemeState, useThemeActions } from '@/domain/store/features/theme'
+import { useThemeState, useThemeActions } from '@/domain/zustand/features/theme'
 import { ThemeRegistry } from '../registry'
 import { createTheme } from '../../shared/hooks/theme'
 import type { ThemeProviderProps } from './props-types'

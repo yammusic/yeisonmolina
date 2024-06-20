@@ -1,2 +1,4 @@
-export * from './features/app'
-export * from './features/theme'
+export * from './features'
+export * from './shared'
+export * from './StoreProvider'
+export * from './props-types'
