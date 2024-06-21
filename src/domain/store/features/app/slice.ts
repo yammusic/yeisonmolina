@@ -5,7 +5,6 @@ import {
   APP_DESCRIPTION,
   APP_NAME,
   APP_AUTHOR,
-  APP_LOCALE,
   APP_VERSION,
 } from '@/domain/constants/app'
 import {
@@ -13,7 +12,6 @@ import {
   setAppDescription,
   setAppName,
   setAuthor,
-  setLocale,
   setNavItems,
   setVersion,
 } from './actions'
@@ -24,13 +22,12 @@ const initialState: AppState = {
   appDescription: APP_DESCRIPTION,
   appName: APP_NAME,
   author: APP_AUTHOR,
-  locale: APP_LOCALE,
   navItems: [
-    { label: 'About Me', path: '#about' },
-    { label: 'Experience', path: '#experience' },
-    { label: 'Projects', path: '#projects' },
-    { label: 'Skills', path: '#skills' },
-    { label: 'Contact', path: '#contact' },
+    { label: 'about', path: '#about' },
+    { label: 'experience', path: '#experience' },
+    { label: 'projects', path: '#projects' },
+    { label: 'skills', path: '#skills' },
+    { label: 'contact', path: '#contact' },
   ],
   version: APP_VERSION,
 }
@@ -58,11 +55,6 @@ export const appSlice = createSlice({
     addCase(setAuthor, (state, { payload }) => ({
       ...state,
       author: payload,
-    }))
-
-    addCase(setLocale, (state, { payload }) => ({
-      ...state,
-      locale: payload,
     }))
 
     addCase(setNavItems, (state, { payload }) => ({

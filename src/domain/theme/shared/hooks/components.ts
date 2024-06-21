@@ -218,35 +218,35 @@ export const themeComponents = (theme: any): ThemeComponents => ({
   //   }
   // },
 
-  // MuiMenuItem: {
-  //   styleOverrides: {
-  //     root: {
-  //       color: theme.darkTextPrimary,
-  //       paddingTop: '10px',
-  //       paddingBottom: '10px',
+  MuiMenuItem: {
+    styleOverrides: {
+      root: {
+        color: theme.darkTextPrimary,
+        paddingTop: '10px',
+        paddingBottom: '10px',
 
-  //       '&.Mui-selected': {
-  //         color: theme.menuSelected,
-  //         backgroundColor: theme.menuSelectedBack,
+        '&.Mui-selected': {
+          color: theme.menuSelected,
+          backgroundColor: theme.menuSelectedBack,
 
-  //         '&:hover': {
-  //           backgroundColor: theme.menuSelectedBack
-  //         },
+          '&:hover': {
+            backgroundColor: theme.menuSelectedBack
+          },
 
-  //         // '& .MuiListItemIcon-root': {
-  //         //   color: theme.menuSelected
-  //         // }
-  //       },
+          // '& .MuiListItemIcon-root': {
+          //   color: theme.menuSelected
+          // }
+        },
 
-  //       '&:hover': {
-  //         backgroundColor: theme.menuSelectedBack,
-  //         color: theme.menuSelected,
+        '&:hover': {
+          backgroundColor: theme.menuSelectedBack,
+          color: theme.menuSelected,
 
-  //         // '& .MuiListItemIcon-root': {
-  //         //   color: theme.menuSelected
-  //         // }
-  //       }
-  //     }
-  //   }
-  // },
+          // '& .MuiListItemIcon-root': {
+          //   color: theme.menuSelected
+          // }
+        }
+      }
+    }
+  },
 })

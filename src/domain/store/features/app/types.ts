@@ -8,7 +8,6 @@ export interface AppState {
   appDescription: string
   appName: string
   author: string
-  locale: 'en' | 'es'
   navItems: NavItem[]
   version: string
 }

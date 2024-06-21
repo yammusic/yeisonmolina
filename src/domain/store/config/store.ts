@@ -1,6 +1,5 @@
 import type { ConfigureStoreOptions } from '@reduxjs/toolkit'
 import { configureStore } from '@reduxjs/toolkit'
-import { persistStore } from 'redux-persist'
 
 import { rootReducer } from './reducers'
 import { useMiddleware } from './middlewares'
@@ -19,10 +18,7 @@ export const makeStore = () => {
     reducer,
   })
 
-  // Create persistor
-  const persistor = persistStore(store)
-
-  return { store, persistor }
+  return { store }
 }
 
-export const { store, persistor } = makeStore()
+export const { store } = makeStore()

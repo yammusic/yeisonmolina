@@ -10,7 +10,6 @@ import {
   setAppDescription,
   setAppName,
   setAuthor,
-  setLocale,
   setNavItems,
   setVersion,
 } from './actions'
@@ -41,7 +40,6 @@ export const useAppActions = () => ({
     setAppDescription,
     setAppName,
     setAuthor,
-    setLocale,
     setNavItems,
     setVersion,
   }, useAppDispatch())
@@ -51,6 +49,5 @@ export const useAppBrand = () => bindActionCreators({ setAppBrand }, useAppDispa
 export const useAppDescription = () => bindActionCreators({ setAppDescription }, useAppDispatch()).setAppDescription
 export const useAppName = () => bindActionCreators({ setAppName }, useAppDispatch()).setAppName
 export const useAppAuthor = () => bindActionCreators({ setAuthor }, useAppDispatch()).setAuthor
-export const useAppLocale = () => bindActionCreators({ setLocale }, useAppDispatch()).setLocale
 export const useAppNavItems = () => bindActionCreators({ setNavItems }, useAppDispatch()).setNavItems
 export const useAppVersion = () => bindActionCreators({ setVersion }, useAppDispatch()).setVersion

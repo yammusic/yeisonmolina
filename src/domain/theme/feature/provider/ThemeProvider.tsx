@@ -3,10 +3,10 @@
 import React, { useEffect, useMemo } from 'react'
 import { useMediaQuery } from '@mui/material'
 
-import { useThemeState, useThemeActions } from '@/domain/zustand/features/theme'
+import { useThemeState, useThemeActions } from '@/domain/store/features/theme'
 import { ThemeRegistry } from '../registry'
 import { createTheme } from '../../shared/hooks/theme'
-import type { ThemeProviderProps } from './props-types'
+import type { ThemeProviderProps } from './types'
 
 import colors from '@/app/styles/theme/iris/_palette.module.scss'
 import typography from '@/app/styles/theme/iris/_typography.module.scss'

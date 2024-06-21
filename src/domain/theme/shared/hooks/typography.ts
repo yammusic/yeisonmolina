@@ -1,15 +1,14 @@
-import type { TypographyOptions } from '@mui/material/styles/createTypography'
-import type { PaletteOptions, ThemeOptionsProps, ThemeTypography } from '../types'
+// import type { TypographyOptions } from '@mui/material/styles/createTypography'
+import type { /* PaletteOptions, */ ThemeOptionsProps, ThemeTypography } from '../types'
 import { useThemeTypographyVariant, useTypographyVariants } from './helpers'
 
 export const useThemeTypography = (palette: ThemeOptionsProps): ThemeTypography => {
-  const { colorMode, fontFamily, typography } = palette
+  const { /* colorMode, */ fontFamily, /* typography */ } = palette
 
   const styles = new Map()
   const variants = useTypographyVariants()
 
   variants.forEach((v) => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     styles.set(v, useThemeTypographyVariant(v, palette))
   })
 
