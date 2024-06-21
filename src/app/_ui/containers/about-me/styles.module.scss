@@ -1,8 +1,13 @@
 .aboutMeSection {
-  background-color: rgba(25, 25, 41, 0.1);
-  backdrop-filter: blur(1px);
-  border-radius: 5px;
   margin-bottom: 32px;
+}
+
+.container {
+  background-color: var(--foreground-opacity-color);
+  backdrop-filter: blur(1px);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  margin-top: 5rem;
 }
 
 .titleContainer {
@@ -11,4 +16,25 @@
   align-items: center;
   margin-bottom: 32px;
   justify-content: center;
+}
+
+.descriptionContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.descriptionStack {
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.image {
+  border-radius: var(--border-radius);
+}
+
+.text {
+  align-content: center !important;
+  font-size: 1rem !important;
+  color: var(--text-color) !important;
 }

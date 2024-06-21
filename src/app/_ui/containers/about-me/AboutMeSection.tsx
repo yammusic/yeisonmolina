@@ -1,45 +1,70 @@
 import React from 'react'
 import Image from 'next/image'
-import { Grid, Typography } from '@mui/material'
+import { useTranslations } from 'next-intl'
+import { Grid, Stack, Typography } from '@mui/material'
 import { FaPersonRays } from 'react-icons/fa6'
 
 import styles from './styles.module.scss'
 
 export function AboutMeSection() {
+  const t = useTranslations('about')
   const imageSize = 280
 
   return (
-    <Grid
-      container
+    <Stack
       className={ styles.aboutMeSection }
       component="section"
-      direction="column"
-      padding={ 4 }
+      id="about"
     >
       <Grid
-        item
-        className={ styles.titleContainer }
-        sx={ { flexDirection: { xs: 'column', md: 'row' } } }
-        xs={ 12 }
+        container
+        className={ styles.container }
+        direction="column"
       >
-        <FaPersonRays size={ 26 } />
+        <Grid
+          item
+          className={ styles.titleContainer }
+          sx={ { flexDirection: { xs: 'column', md: 'row' } } }
+          xs={ 12 }
+        >
+          <Stack direction="row" gap={ 2 } mb={ 4 }>
+            <FaPersonRays size={ 26 } />
 
-        <Typography sx={ { marginLeft: 3 } } variant="h4">About Me</Typography>
+            <Typography variant="h2">
+              { t('title') }
+            </Typography>
+          </Stack>
+        </Grid>
+
+        <Grid item className={ styles.descriptionContainer } xs={ 12 }>
+          <Stack
+            className={ styles.descriptionStack }
+            sx={ { flexDirection: { xs: 'column', md: 'row' } } }
+          >
+            <Image
+              alt="profile"
+              className={ styles.image }
+              height={ imageSize }
+              src="/assets/profile.webp"
+              width={ imageSize }
+            />
+
+            <Stack gap={ 2 }>
+              <Typography className={ styles.text } component="p" variant="body1">
+                { t('firstDescription') }
+              </Typography>
+
+              <Typography className={ styles.text } component="p" variant="body1">
+                { t('secondDescription') }
+              </Typography>
+
+              <Typography className={ styles.text } component="p" variant="body1">
+                { t('thirdDescription') }
+              </Typography>
+            </Stack>
+          </Stack>
+        </Grid>
       </Grid>
-
-      <Grid item sx={ { display: 'flex', flexDirection: 'row' } } xs={ 12 }>
-        <Image
-          alt="profile"
-          height={ imageSize }
-          src="/assets/profile.webp"
-          style={ { borderRadius: '5%', marginRight: '32px' } }
-          width={ imageSize }
-        />
-
-        <Typography component="p" sx={ { alignContent: 'center' } } variant="body1">
-          I&apos;m a software engineer with 8 years of experience in the field. I&apos;m passionate about creating software that solves real problems. I&apos;ve worked on a variety of projects, including web applications, mobile apps, and embedded systems. I&apos;m always looking for new and exciting projects to work on.
-        </Typography>
-      </Grid>
-    </Grid>
+    </Stack>
   )
 }
