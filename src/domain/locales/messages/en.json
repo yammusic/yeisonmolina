@@ -1,0 +1,27 @@
+{
+  "common": {},
+
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+
+  "profile": {
+    "iam": "I'm",
+    "myName": "Yeison Molina",
+    "carrierTitle": "Software Developer",
+    "carrier": "Full Stack | Mobile | DevOps",
+    "yearsExperience": "+10 years of experience"
+  },
+
+  "about": {
+    "title": "About Me",
+    "firstDescription": "👋🏼 Hi! I'm Yeison Andrés Molina Salcedo, a software developer with over 10 years of experience, specializing in Frontend and Mobile development with Full Stack and DevOps skills. I have worked in sectors such as education, logistics, mobility, and e-commerce, both nationally and internationally.",
+    "secondDescription": "✅ My skills include advanced frontend technologies like Next.js, React, React Native, Redux, TypeScript, JavaScript, Material UI, SASS. I also have backend experience with Node.js, PHP, Ruby on Rails, Python, and databases like MySQL, PostgreSQL, and MongoDB.",
+    "thirdDescription": "🚀 I am an expert in agile methodologies like SCRUM and Kanban, and have led development teams, ensuring high-quality product delivery. My commitment to excellence is reflected in creating efficient and optimized code, ensuring its quality with unit tests and DevOps tools."
+  }
+}
