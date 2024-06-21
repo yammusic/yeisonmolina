@@ -1,2 +1,2 @@
 export * from './LocaleMenu'
-export * from './props-types'
+export * from './types'

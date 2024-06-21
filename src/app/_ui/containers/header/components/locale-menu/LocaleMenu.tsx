@@ -1,13 +1,21 @@
-import React, { useCallback, useState, type MouseEvent } from 'react'
+import React, { useCallback, useState, useTransition, type MouseEvent } from 'react'
+import { useParams } from 'next/navigation'
 import { Box, IconButton, Menu, MenuItem } from '@mui/material'
 
 import { EnglishIcon, SpanishIcon } from '@/app/components/common'
-import type { LocaleMenuProps, LocaleType } from './props-types'
+import { usePathname, useRouter } from '@/domain/locales/navigation'
+import type { LocaleMenuProps } from './types'
 
-export function LocaleMenu({ onChangeLocale }: Readonly<LocaleMenuProps>) {
-  const [currentLocale, setCurrentLocale] = useState<LocaleType>('en')
+export function LocaleMenu(props: Readonly<LocaleMenuProps>) {
+  const { locale, onChangeLocale } = props
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
   const open = Boolean(anchorEl)
+
+  const router = useRouter()
+  const pathname = usePathname()
+  const params = useParams()
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [_, startTransition] = useTransition()
 
   const onShow = useCallback((event: MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget)
@@ -18,9 +26,15 @@ export function LocaleMenu({ onChangeLocale }: Readonly<LocaleMenuProps>) {
   }, [setAnchorEl])
 
   const onChange = useCallback((event: MouseEvent<HTMLElement>) => {
-    const locale = event.currentTarget?.getAttribute('value') as LocaleType
-    setCurrentLocale(locale)
-    onChangeLocale?.(locale)
+    const locale = event.currentTarget?.getAttribute('value') as 'en' | 'es'
+
+    startTransition(() => {
+      router.replace(
+        { pathname, params } as any,
+        { locale }
+      )
+    })
+    onChangeLocale?.(`${locale}`)
     onClose()
   }, [onClose, onChangeLocale])
 
@@ -32,11 +46,10 @@ export function LocaleMenu({ onChangeLocale }: Readonly<LocaleMenuProps>) {
         aria-haspopup="true"
         aria-label="language"
         onClick={ onShow }
-        // size="large"
       >
-        { currentLocale === 'en' && <EnglishIcon /> }
+        { locale === 'en' && <EnglishIcon /> }
 
-        { currentLocale === 'es' && <SpanishIcon /> }
+        { locale === 'es' && <SpanishIcon /> }
       </IconButton>
 
       <Menu
