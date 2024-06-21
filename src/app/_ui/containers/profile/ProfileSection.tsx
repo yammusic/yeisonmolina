@@ -1,11 +1,17 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import { Box, Button, Grid, Stack, Typography } from '@mui/material'
 import { FaFilePdf, FaGithub, FaLinkedin } from 'react-icons/fa'
 
 import styles from './styles.module.scss'
+import { CURRICULUM_URL, GITHUB_URL, LINKEDIN_URL } from '@/domain/constants/app'
 
 export function ProfileSection() {
+  const t = useTranslations('profile')
   const imageSize = 300
 
   return (
@@ -13,6 +19,7 @@ export function ProfileSection() {
       container
       className={ styles.profileSection }
       component="section"
+      id="home"
       spacing={ 2 }
     >
       <Grid
@@ -31,39 +38,61 @@ export function ProfileSection() {
           />
         </Box>
 
-        <Typography
-          className={ styles.name }
-          component="h1"
-          variant="h2"
-        >
-          I&apos;m
-          <br />
-          Yeison Molina
-        </Typography>
+        <Stack alignItems={ 'flex-start' }>
+          <Typography className={ styles.name } variant="h1">
+            { t('iam') }
 
-        <Typography
-          gutterBottom
-          className={ styles.carrier }
-          component="h3"
-          variant="h4"
-        >
-          Software Developer
-        </Typography>
+            <br />
+
+            { t('myName') }
+          </Typography>
+
+          <Typography className={ styles.carrierTitle } variant="h3">
+            { t('carrierTitle') }
+          </Typography>
+
+          <Typography className={ styles.carrier } variant="h3">
+            { t('carrier') }
+          </Typography>
+
+          <Typography component="span" variant="h5">
+            { t('yearsExperience') }
+          </Typography>
+        </Stack>
+
 
         <Stack direction="row" marginTop={ 3 } spacing={ 2 }>
-          <Button color="primary" variant="outlined">
+          <Button
+            LinkComponent={ Link }
+            color="primary"
+            href={ LINKEDIN_URL }
+            target="_blank"
+            variant="outlined"
+          >
             <FaLinkedin size={ 22 } />
 
             <Typography className={ styles.btnText }>LinkedIn</Typography>
           </Button>
 
-          <Button color="primary" variant="outlined">
+          <Button
+            LinkComponent={ Link }
+            color="primary"
+            href={ GITHUB_URL }
+            target="_blank"
+            variant="outlined"
+          >
             <FaGithub size={ 22 } />
 
             <Typography className={ styles.btnText }>Github</Typography>
           </Button>
 
-          <Button color="secondary" variant="outlined">
+          <Button
+            LinkComponent={ Link }
+            color="secondary"
+            href={ CURRICULUM_URL }
+            target="_blank"
+            variant="outlined"
+          >
             <FaFilePdf size={ 22 } />
 
             <Typography className={ styles.btnText }>Curriculum</Typography>

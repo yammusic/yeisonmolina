@@ -1,10 +1,10 @@
 // $beginGradient: #f97316;
 $beginGradient: #db6f31;
 $endGradient: #a6a8b0;
+$gradient: linear-gradient(90deg, $beginGradient, $endGradient);
 
 .profileSection {
   align-items: center;
-  // height: calc(100vh - 64px);
   height: 100vh;
 }
 
@@ -16,14 +16,26 @@ $endGradient: #a6a8b0;
 }
 
 .name {
-  // font-weight: bold;
+  font-weight: 300 !important;
+  font-size: 3.75rem !important;
+  margin-bottom: .5rem !important;
+}
+
+.carrierTitle {
+  background-image: $gradient;
+  background-clip: text;
+  color: transparent !important;
+  font-size: 1.9rem !important;
+  font-weight: 400 !important;
 }
 
 .carrier {
-  background-image: linear-gradient(90deg, $beginGradient, $endGradient);
+  background-image: $gradient;
   background-clip: text;
-  color: transparent;
-  font-weight: bold;
+  color: transparent !important;
+  font-size: 1.5rem !important;
+  font-weight: 400 !important;
+  text-align: left;
 }
 
 .btnText {
