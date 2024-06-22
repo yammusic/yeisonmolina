@@ -24,8 +24,8 @@ const initialState: AppState = {
   author: APP_AUTHOR,
   navItems: [
     { label: 'about', path: '#about' },
-    { label: 'experience', path: '#experience' },
     { label: 'projects', path: '#projects' },
+    { label: 'experience', path: '#experience' },
     { label: 'skills', path: '#skills' },
     { label: 'contact', path: '#contact' },
   ],

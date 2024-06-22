@@ -44,7 +44,7 @@ export function Header(props: Readonly<HeaderProps>) {
                 color="inherit"
                 href={ item.path }
                 key={ item.path }
-                sx={ { color: isActive ? palette.secondary.main : undefined } }
+                sx={ { color: isActive ? palette.secondary.main : palette.text.primary } }
                 variant={ isActive ? 'outlined' : 'text' }
               >
                 { t(item.label) }

@@ -1,7 +1,12 @@
 import React from 'react'
 import { Container } from '@mui/material'
 
-import { AboutMeSection, ExperienceSection, ProfileSection } from '@/app/containers'
+import {
+  AboutMeSection,
+  ExperienceSection,
+  ProjectsSection,
+  ProfileSection,
+} from '@/app/containers'
 import { ScrollObserver } from '@/app/components'
 
 export default function Home() {
@@ -12,6 +17,8 @@ export default function Home() {
       <ProfileSection />
 
       <AboutMeSection />
+
+      <ProjectsSection />
 
       <ExperienceSection />
     </Container>
