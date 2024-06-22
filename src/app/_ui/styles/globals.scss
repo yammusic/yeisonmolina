@@ -6,6 +6,9 @@
 
   --foreground-color: var(--color-background-paper);
   --foreground-opacity-color: rgba(255, 255, 255, 0.2);
+  --background-primary-color: var(--color-primary-main);
+  --background-secondary-color: var(--color-secondary-main);
+  --background-success-color: var(--color-success-main);
   --text-color: var(--color-text-primary);
   --border-radius: 12px;
 }
@@ -14,6 +17,8 @@
   :root {
     --foreground-color: var(--color-dark-background-paper);
     --foreground-opacity-color: rgba(17, 25, 54, 0.2);
+    --background-primary-color: var(--color-dark-primary-dark);
+    --background-secondary-color: var(--color-dark-secondary-dark);
     --text-color: var(--color-dark-grey-600);
   }
 }
