@@ -17,6 +17,11 @@ const nextConfig = {
       './src/**/*.sass',
     ],
   },
+
+  images: {
+    remotePatterns: [
+    ],
+  },
 }
 
 const nexConfigWithIntl = withNextIntl('./src/domain/locales/i18n.ts')(nextConfig)
