@@ -15,8 +15,8 @@ export function ScrollObserver() {
     const handleScroll = () => {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-          const { top } = entry.boundingClientRect
-          if (entry.isIntersecting && top <= 0) {
+          const { top, bottom } = entry.boundingClientRect
+          if (/* entry.isIntersecting &&*/ top <= 0 && bottom >= 0) {
             const { id } = entry.target
             history.replaceState(null, '', `#${id}`)
           }
