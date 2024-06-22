@@ -132,6 +132,7 @@ export function Carousel(props: Readonly<CarouselProps>) {
               className={ 'embla__dot'.concat(
                 index === selectedIndex ? ' embla__dot--selected' : ''
               ) }
+              // eslint-disable-next-line react/no-array-index-key
               key={ index }
               onClick={ () => onDotButtonClick(index) }
             />
