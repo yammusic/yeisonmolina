@@ -23,5 +23,120 @@
     "firstDescription": "👋🏼 ¡Hola! Soy Yeison Andrés Molina Salcedo, un desarrollador de software con más de 10 años de experiencia, especializado en desarrollo Frontend y Mobile con habilidades Full Stack y DevOps. He trabajado en sectores como educación, logística, movilidad y comercio electrónico, tanto a nivel nacional como internacional.",
     "secondDescription": "✅ Mis habilidades incluyen tecnologías frontend avanzadas como Next.js, React, React Native, Redux, TypeScript, JavaScript, Material UI, SASS. También tengo experiencia en el backend con Node.js, PHP, Ruby on Rails, Python y bases de datos como MySQL, PostgreSQL y MongoDB.",
     "thirdDescription": "🚀 Soy un experto en metodologías ágiles como SCRUM y Kanban, y he liderado equipos de desarrollo, asegurando una entrega de productos de alta calidad. Mi compromiso con la excelencia se refleja en la creación de código eficiente y optimizado, garantizando su calidad con pruebas unitarias y herramientas DevOps."
+  },
+
+  "experience": {
+    "title": "Experiencia",
+    "technologies": "Tecnologías",
+    "work": {
+      "eccocar": {
+        "title": "Eccocar",
+        "location": "Madrid, España. (Remoto)",
+        "role": "FullStack & DevOps II",
+        "date": "Dic 2020 - Nov 2023",
+        "description": "Análisis, diseño y construcción de aplicaciones móviles y microservicios para productos privados y públicos, implementación y mantenimiento de herramientas DevOps (CI/CD, Fastlane), implementación de actualizaciones, y prestación de servicios de soporte y mantenimiento.",
+        "technologies": "React, React Native, Redux, TypeScript, Material UI, MySQL, Jenkins, Fastlane, Firebase, GCloud, TDD, SCRUM."
+      },
+      "itmakers": {
+        "title": "IT Makers",
+        "location": "Ibague, Tolima, Colombia.",
+        "role": "Lead Developer, FullStack & DevOps",
+        "date": "Ene 2020 - Dic 2020",
+        "description": "Análisis, diseño y construcción de sitios web, aplicaciones móviles y microservicios para productos privados y públicos, implementación y mantenimiento de herramientas DevOps (CI/CD), implementación de actualizaciones, y prestación de servicios de soporte y mantenimiento.",
+        "technologies": "React, React Native, Expo, Redux, TypeScript, PHP, Material UI, PostgreSQL, Firebase, AWS, Docker, Kubernetes, Gitlab Actions, API REST, SCRUM, Git."
+      },
+      "ticmakers": {
+        "title": "TIC Makers",
+        "location": "Ibagué, Tolima, Colombia.",
+        "role": "Desarrollador Frontend & Mobile",
+        "date": "Nov 2017 - Dic 2019",
+        "description": "Diseño y construcción de sitios web y aplicaciones móviles para productos privados y públicos, implementación de actualizaciones, servicios de soporte y mantenimiento.",
+        "technologies": "React, Angular, Ionic, React Native, Expo, WebSocket, TypeScript, PHP, Bootstrap, Material UI, PostgreSQL, Firebase, AWS, Docker, API REST, SCRUM, Git."
+      },
+      "colwit": {
+        "title": "Colwit",
+        "location": "Ibagué, Tolima, Colombia.",
+        "role": "Desarrollador Backend",
+        "date": "Sep 2017",
+        "description": "Diseño y construcción de una API Rest creada en NodeJS. Diseño y construcción de una API SOAP creada en Python.",
+        "technologies": "NodeJS, Python, TypeScript, Express, MySQL, API REST, API SOAP, Git."
+      },
+      "idcmk3": {
+        "title": "IDC-MK",
+        "location": "Ibagué, Tolima, Colombia.",
+        "role": "Desarrollador FullStack (Freelancer)",
+        "date": "Abr 2017 - Ago 2017",
+        "description": "Diseño y construcción de nuevas funcionalidades, implementación de actualizaciones, servicios de soporte y mantenimiento.",
+        "technologies": "React, JavaScript, PHP, WordPress, Bootstrap, MySQL, API REST, Git."
+      },
+      "wss2": {
+        "title": "WSS International",
+        "location": "Ibagué, Tolima, Colombia.",
+        "role": "Desarrollador FullStack",
+        "date": "Nov 2014 - Feb 2017",
+        "description": "Diseño y construcción de nuevas funcionalidades, implementación de actualizaciones, servicios de soporte y mantenimiento para la empresa INCWO (Francia).",
+        "technologies": "Ruby on Rails, JavaScript, Bootstrap, MySQL, MongoDB, API REST, Git."
+      },
+      "idcmk2": {
+        "title": "IDC-MK",
+        "location": "Ibagué, Tolima, Colombia.",
+        "role": "Desarrollador FullStack (Freelancer)",
+        "date": "Ene 2014 - Dic 2016",
+        "description": "Diseño y construcción de nuevas funcionalidades, implementación de actualizaciones, servicios de soporte y mantenimiento.",
+        "technologies": "JavaScript, PHP, WordPress, Bootstrap, MySQL, Git."
+      },
+      "wss1": {
+        "title": "WSS International",
+        "location": "Ibagué, Tolima, Colombia.",
+        "role": "Desarrollador FullStack",
+        "date": "Oct 2013 - Oct 2014",
+        "description": "Diseño y construcción de nuevas funcionalidades, implementación de actualizaciones, servicios de soporte y mantenimiento para la empresa JobProd (Francia).",
+        "technologies": "Ruby on Rails, JavaScript, Bootstrap, MySQL, MongoDB, API REST, Git."
+      },
+      "idcmk1": {
+        "title": "IDC-MK",
+        "location": "Ibagué, Tolima, Colombia.",
+        "role": "Desarrollador FullStack (Freelancer)",
+        "date": "Oct 2013 - Dic 2013",
+        "description": "Diseño y construcción de sitio web para la empresa ASOCIMANO.",
+        "technologies": "JavaScript, PHP, WordPress, Bootstrap, MySQL, Git."
+      },
+      "coopedia": {
+        "title": "Coopedia OES",
+        "location": "Ibagué, Tolima, Colombia.",
+        "role": "Desarrollador FullStack (Freelancer)",
+        "date": "Mar 2013 - Abr 2013",
+        "description": "Diseño y construcción de sitio web para la empresa Coopedia OES.",
+        "technologies": "JavaScript, PHP, Bootstrap, MySQL, Git."
+      },
+      "liceo": {
+        "title": "Institución Educativa Liceo Nacional",
+        "location": "Ibagué, Tolima, Colombia.",
+        "role": "Técnico de Sistemas y Mantenimiento",
+        "date": "Oct 2012 - Dic 2012",
+        "description": "Revisión de hardware y sistema operativo y mantenimiento preventivo.",
+        "technologies": "Microsoft Windows, CMD."
+      }
+    },
+    "education": {
+      "sena2": {
+        "title": "SENA",
+        "location": "Ibagué, Tolima, Colombia.",
+        "role": "Técnico en Desarrollo de Software",
+        "date": "Ene 2013 - Dic 2013"
+      },
+      "sena1": {
+        "title": "SENA",
+        "location": "Ibagué, Tolima, Colombia.",
+        "role": "Técnico en Sistemas",
+        "date": "Ene 2012 - Dic 2012"
+      },
+      "bachelor": {
+        "title": "Institución Educativa Técnica Pablo Sexto",
+        "location": "Planadas, Tolima, Colombia.",
+        "role": "Bachillerato en Sistemas",
+        "date": "Promoción 2006"
+      }
+    }
   }
 }
